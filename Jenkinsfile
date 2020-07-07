@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('RemoteConnection') {
                 agent any
-                }
                 steps {
                     script {
                         sshagent (['remotehost']) {
