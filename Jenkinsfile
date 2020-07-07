@@ -9,7 +9,7 @@ pipeline {
                 steps {
                     script {
                         sshagent (credentials: ['remotehost']) {
-                        sh "scp index.html -o StrictHostKeyChecking=no -l vagrant 192.168.43.2"
+                        sh "scp -o StrictHostKeyChecking=no index.html 192.168.43.2"
                         }
                     }
                 }
